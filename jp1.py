@@ -1,4 +1,4 @@
-
+import math.h
 principal = float(input("Enter the Principal amount: "))
 rate = float(input("Enter the Rate of Interest (% per year): "))
 time = float(input("Enter the Time (in years): "))
