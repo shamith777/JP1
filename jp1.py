@@ -1,8 +1,15 @@
-import math.h
-principal = float(input("Enter the Principal amount: "))
-rate = float(input("Enter the Rate of Interest (% per year): "))
-time = float(input("Enter the Time (in years): "))
-
-simple_interest = (principal * rate * time) / 100
-
-print(f"\nThe Simple Interest is: {simple_interest}")
+import sys
+if len(sys.argv) !=4:
+    print("ERROR: Please provide Principal, Rate of interest and Time as parameters.")
+    print("usage: python3 jp1.py <PRINCIPAL> <RATE> <TIME>")
+    sys.exit(1)
+principal = float(sys.argv[1])
+rate = float(sys.argv[2])
+time = float(sys.argv[3])
+print("\n--- INPUT RECEIVED FROM JENKINS PARAMETERS ---")
+print("Principal:",principal)
+print("Rate of Interest:",rate)
+print("Time:",time)
+simple_interest = (principal * rate * time)/100
+print("\n---- RESULT ----")
+print("Simple Interest:",simple_interest)
